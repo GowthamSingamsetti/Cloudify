@@ -155,3 +155,25 @@ a {
     padding-left: 0;
   }
 }
+
+/* Icons */
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.icon--primary {
+  fill: var(--color-primary);
+}
+
+/* Here only a single hyphen because it is not a variation for icon class. It is an Interlinear class. In BEM single hyphen is used to seperate words */
+.icon-container {
+  background: #f3f9fa;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
