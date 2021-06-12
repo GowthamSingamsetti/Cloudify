@@ -1,15 +1,24 @@
 {
   "name": "Cloudify",
   "version": "1.0.0",
-  "description": "",
+  "description": "Cloud services for everyone.",
   "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GowthamSingamsetti/cloudify.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "parcel-bundler": "^1.12.5"
-  }
+  "bugs": {
+    "url": "https://github.com/GowthamSingamsetti/cloudify/issues"
+  },
+  "homepage": "https://github.com/GowthamSingamsetti/cloudify#readme"
 }

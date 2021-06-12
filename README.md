@@ -1,2 +1,2 @@
-# cloudify
+# Cloudify
 Cloud services for everyone.
