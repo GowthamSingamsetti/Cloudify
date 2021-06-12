@@ -5,7 +5,7 @@
   --color-headings: #1b0760;
   --color-body: #918ca4;
   --color-body-darker: #5c5577;
-  --color-borders: #ccc;
+  --color-border: #ccc;
   --border-radius: 30px;
 }
 
@@ -37,7 +37,6 @@ h3 {
 }
 
 h1 {
-  /* 7 x font size of html element(10px) = 70px */
   font-size: 7rem;
 }
 
@@ -72,7 +71,6 @@ p {
 }
 
 /* Links */
-
 a {
   text-decoration: none;
 }
@@ -99,7 +97,6 @@ a {
     font-size: 1.5rem;
   }
 }
-
 /* Badges */
 
 .badge {
@@ -107,17 +104,16 @@ a {
   font-size: 2rem;
   font-weight: 600;
   padding: 0.5rem 2rem;
-  white-space: nowrap; /* prevents badge from wrapping into 2nd line */
+  white-space: nowrap;
 }
 
-/* BEM = Block element modifier. Using -- hyphens we seperate a block from a modifier */
 .badge--primary {
-  background-color: var(--color-primary);
+  background: var(--color-primary);
   color: #fff;
 }
 
 .badge--secondary {
-  background-color: var(--color-secondary);
+  background: var(--color-secondary);
   color: #fff;
 }
 
@@ -135,19 +131,16 @@ a {
     font-size: 1.2rem;
   }
 }
-
 /* Lists */
-
 .list {
   list-style: none;
-  padding-left: 0; /* To make initial padding given by browser to 0 */
+  padding-left: 0;
   color: var(--color-headings);
 }
 
 .list--inline .list__item {
   display: inline-block;
   margin-right: 2rem;
-  font-weight: bold;
 }
 
 .list--tick {
@@ -165,19 +158,25 @@ a {
     padding-left: 0;
   }
 }
-
 /* Icons */
-
 .icon {
   width: 40px;
   height: 40px;
+}
+
+.icon--small {
+  width: 30px;
+  height: 30px;
 }
 
 .icon--primary {
   fill: var(--color-primary);
 }
 
-/* Here only a single hyphen because it is not a variation for icon class. It is an Interlinear class. In BEM single hyphen is used to seperate words */
+.icon--white {
+  fill: #fff;
+}
+
 .icon-container {
   background: #f3f9fa;
   width: 64px;
@@ -188,27 +187,31 @@ a {
   align-items: center;
 }
 
-/* Buttons */
+.icon-container--accent {
+  background: var(--color-accent);
+}
 
+/* Buttons */
 .btn {
-  font-size: 1.8rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 2rem 3rem; /*v h*/
-  text-align: center;
-  border: 0;
   border-radius: 40px;
+  border: 0;
   cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  padding: 2rem 3rem;
+  text-align: center;
+  text-transform: uppercase;
   white-space: nowrap;
-  margin: 1rem 0; /*v h*/
 }
 
 .btn--primary {
   background: var(--color-primary);
   color: #fff;
 }
+
 .btn--primary:hover {
-  background: #465be4;
+  background: #3a8ffd;
 }
 
 .btn--secondary {
@@ -217,7 +220,7 @@ a {
 }
 
 .btn--secondary:hover {
-  background: #16a2bb;
+  background: #05cdf0;
 }
 
 .btn--accent {
@@ -242,7 +245,7 @@ a {
 
 .btn--block {
   width: 100%;
-  display: inline-block; /* anchor elem are inline by def so width wont work which is why we have to give display inline-block */
+  display: inline-block;
 }
 
 @media screen and (min-width: 1024px) {
@@ -252,14 +255,13 @@ a {
 }
 
 /* Inputs */
-
 .input {
-  padding: 1.5rem 3.5rem;
-  border: 1px solid var(--color-borders);
   border-radius: var(--border-radius);
-  outline: 0;
+  border: 1px solid var(--color-border);
   color: var(--color-headings);
   font-size: 2rem;
+  outline: 0;
+  padding: 1.5rem 3.5rem;
 }
 
 ::placeholder {
@@ -267,7 +269,7 @@ a {
 }
 
 .input-group {
-  border: 1px solid var(--color-borders);
+  border: 1px solid var(--color-border);
   border-radius: var(--border-radius);
   display: flex;
 }
@@ -287,12 +289,10 @@ a {
     font-size: 1.5rem;
   }
 }
-
 /* Cards */
-
 .card {
   border-radius: 7px;
-  box-shadow: 0 0 20px 10px #f3f3f3; /* 20px for blurring, 10px for spreading(larger value then bigger shadow) */
+  box-shadow: 0 0 20px 10px #f3f3f3;
   overflow: hidden;
 }
 
@@ -316,7 +316,6 @@ a {
 }
 
 /* Plans */
-
 .plan__name {
   color: #fff;
   margin: 0;
@@ -353,7 +352,7 @@ a {
 .plan--popular .card__header::before {
   content: url(../images/popular.svg);
   width: 40px;
-  display: inline-block; /*This is inline elem so to make width visible disp to inline-block*/
+  display: inline-block;
   position: absolute;
   top: -6px;
   right: 5%;
@@ -376,9 +375,7 @@ a {
     font-size: 1.7rem;
   }
 }
-
-/*Media*/
-
+/* Media */
 .media {
   display: flex;
 }
@@ -394,9 +391,7 @@ a {
 .media__image {
   margin-top: 1rem;
 }
-
 /* Quotes */
-
 .quote {
   font-size: 3rem;
   font-style: italic;
@@ -425,6 +420,7 @@ a {
   font-size: 2rem;
   font-style: normal;
 }
+
 .quote__line {
   position: relative;
   bottom: 10px;
@@ -445,7 +441,6 @@ a {
 }
 
 /* Grids */
-
 .grid {
   display: grid;
 }
@@ -459,5 +454,41 @@ a {
 @media screen and (min-width: 1024px) {
   .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Testimonials */
+.testimonial {
+  padding: 3rem;
+}
+
+.testimonial__image {
+  position: relative;
+  margin: 0 3rem;
+}
+
+.testimonial__image > img {
+  width: 100%;
+}
+
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial__image {
+    margin: 0;
+  }
+
+  .testimonial .quote,
+  .testimonial .quote__author {
+    font-size: 2.4rem;
+  }
+
+  .testimonial .quote {
+    margin-left: 6rem;
+    margin-right: 0;
   }
 }
